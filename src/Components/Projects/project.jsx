@@ -59,15 +59,15 @@ export default function ProjectShowcase() {
         </motion.div>
 
         {/* Project Display Layout */}
-        <div className="flex flex-col gap-8 items-center">
+        <div className="flex flex-col gap-6 items-center  ">
           {displayedProjects.map((project, index) => {
             if (index === 0 || index === 3) {
               return <LargeCard key={project.id} />;
             } else if (index === 1 || index === 2 || index === 4 || index === 5) {
               if (index % 2 === 1) {
                 return (
-                  <div key={project.id} className="flex flex-col md:flex-row gap-6 justify-center">
-                    <SmallCard />
+                  <div key={project.id} className="flex flex-col md:flex-row gap-6 justify-center items-center md:p-0 ">
+                    <SmallCard  />
                     {displayedProjects[index + 1] && <SmallCard />}
                   </div>
                 );

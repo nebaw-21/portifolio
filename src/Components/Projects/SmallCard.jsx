@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 
 export default function SmallCard() {
   return (
-<div className="p-4 md:p-0">
+<div className="p-4 ">
 
-    <div className="flex flex-col gap-4 p-4 mt-4 text-white rounded-2xl shadow-cyan-500 shadow-sm overflow-hidden border border-gray-700 transition-all  hover:shadow-lg w-[400px] mx-auto">
+    <div className="flex flex-col gap-4 p-4 mt-4 text-white rounded-2xl shadow-cyan-500 shadow-sm overflow-hidden border border-gray-700 transition-all  hover:shadow-lg max:w-[500px] mx-auto">
       {/* Image Section */}
       <div className="w-full flex justify-center items-center">
         <img src={img1} alt="Project" className="w-full h-55 object-contain rounded-lg shadow-md" />
