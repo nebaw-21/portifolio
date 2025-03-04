@@ -16,7 +16,7 @@ const Home = () => {
     // Set a timeout to hide the loading screen after 3 seconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(timer); // Cleanup function
   }, []);

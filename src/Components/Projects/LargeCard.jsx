@@ -1,4 +1,4 @@
-import img1 from "../../assets/download-removebg-preview.png";
+import img1 from "../../assets/sample.png";
 import { FaGithub } from "react-icons/fa";
 
 
@@ -6,15 +6,15 @@ export default function LargeCard() {
   return (
 <div className="p-4 md:p-0">
 
-    <div className="flex flex-col md:flex-row gap-8 p-4 mt-4 text-white rounded-2xl shadow-cyan-500 shadow-sm overflow-hidden border border-gray-700 transition-all  hover:shadow-lg  max-w-5xl mx-auto">
+    <div className="flex flex-col md:flex-row  p-4 gap-4  text-white rounded-2xl shadow-cyan-500 shadow-sm overflow-hidden border border-gray-700 transition-all  hover:shadow-lg  max-w-5xl mx-auto">
       {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center items-center">
-        <img src={img1} alt="Project" className="w-full h-55 object-contain rounded-lg shadow-md" />
+        <img src={img1} alt="Project" className="w-full h-55 object-cover rounded-lg shadow-md" />
       </div>
 
       {/* Text Section */}
       <div className="flex flex-col gap-4 w-full md:w-2/3 text-center">
-        <h1 className="text-3xl font-extrabold tracking-wide text-white">Project Title</h1>
+        <h1 className="text-2xl inter-extrabold tracking-wide text-white">Project Title</h1>
         <p className="text-lg text-white leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, fermentum nisl. Donec turpis odio, lacinia eu mi sit amet, dictum aliquam purus.
         </p>

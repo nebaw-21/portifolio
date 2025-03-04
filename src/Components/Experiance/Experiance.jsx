@@ -33,7 +33,7 @@ export default function Experience() {
       </motion.div>
 
       {/* Experience Cards */}
-      <section className="shadow-xl mx-auto max-w-6xl py-6 px-4 bg-gray-900 md:mt-8 shadow-cyan-500">
+      <section className="shadow-xl  max-w-6xl py-6 px-4 bg-gray-900 md:mt-8 shadow-cyan-500">
         <div className="space-y-6">
           {experiences.map((exp, index) => (
             <motion.div

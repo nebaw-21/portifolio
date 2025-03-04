@@ -108,7 +108,7 @@ export default function TestimonialSlider() {
                   alt={testimonial.name}
                   width={80}
                   height={80}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full scale-105 hover:scale-110"
                 />
               </div>
 

@@ -61,7 +61,7 @@ const Navbar = () => {
               <img
                 src={profilePic}
                 alt="Profile"
-                className="w-24 h-24 rounded-full border-4 border-cyan-500 shadow-md object-cover scale-105"
+                className="w-24 h-24 rounded-full border-4 border-cyan-500 shadow-md object-cover scale-105 hover:scale-110"
               />
               <h2 className="text-xl text-white mt-3 inter-bold ">Nebiyu Zewge</h2>
             </div>

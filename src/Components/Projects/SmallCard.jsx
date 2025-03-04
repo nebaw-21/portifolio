@@ -1,5 +1,5 @@
 
-import img1 from "../../assets/download-removebg-preview.png";
+import img1 from "../../assets/sample2.jfif";
 import { FaGithub } from "react-icons/fa";
 
 export default function SmallCard() {
@@ -14,7 +14,7 @@ export default function SmallCard() {
 
       {/* Text Section */}
       <div className="flex flex-col gap-4 w-full  text-center">
-        <h1 className="text-3xl font-extrabold tracking-wide text-white">Project Title</h1>
+        <h1 className="text-2xl font-extrabold tracking-wide text-white">Project Title</h1>
 
 
         <div className="flex gap-3 justify-end md:justify-start">

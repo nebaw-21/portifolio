@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
+            <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
             <div className="flex gap-4">
               <Link
                 to="https://github.com/nebaw-21"
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Newsletter or Additional Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">About Me</h3>
+            <h3 className="text-xl font-semibold mb-2">About Me</h3>
             <p className="text-slate-300">
               i provide high-quality services to my clients. Feel free to reach out to me for any inquiries.
             </p>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-800 mt-8 pt-6 text-center text-slate-400">
+        <div className="border-t border-slate-800 mt-2 pt-6 text-center text-slate-400">
           <p>© {new Date().getFullYear()} @nebaw. All rights reserved.</p>
         </div>
       </div>
