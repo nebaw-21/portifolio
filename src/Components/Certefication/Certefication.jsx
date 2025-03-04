@@ -1,53 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { certificates } from "./data"; // Import an array of certificates
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 import Header from "../Header"
+import {certificates} from "./data";
 
-export default function CertificationShowcase() {
-  const [selectedCert, setSelectedCert] = useState(null);
+export default function CertificateShowcase() {
+  const { width, height } = useWindowSize();
+  const [showConfetti, setShowConfetti] = useState(true);
+
+  // Stop confetti after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setShowConfetti(false), 7000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-<>
 
-<Header/>
+    <>
+    <Header />
+    
+    <div className="min-h-screen bg-gray-900 py-12 px-6 relative overflow-hidden">
+      {/* Confetti Celebration */}
+      {showConfetti && <Confetti width={width} height={height} />}
 
-    <div className="min-h-screen bg-gray-900 p-8 text-white">
-      <h1 className="text-4xl font-bold text-center mb-8">My Certifications</h1>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <h2 className="text-center text-white text-4xl font-bold mb-10">
+        Certifications 🏆
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {certificates.map((cert, index) => (
           <motion.div
-            key={index}
-            className="bg-white/10 p-4 rounded-2xl shadow-lg cursor-pointer hover:shadow-2xl transform hover:scale-105 transition-all text-white"
-            onClick={() => setSelectedCert(cert)}
-            initial={{ opacity: 0, y: 50 }}
+            key={cert.id}
+            className="bg-gray-800 bg-opacity-50 backdrop-blur-lg shadow-lg rounded-xl p-6 text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.8, delay: index * 0.3 }}
+            whileHover={{ scale: 1.05, rotate: 2 }}
           >
-            <img src={cert.image} alt={cert.title} className="rounded-lg" />
-            <h2 className="text-lg font-semibold mt-2">{cert.title}</h2>
-            <p className="text-sm text-white">{cert.organization}</p>
+            {/* Certificate Image */}
+            <div className="relative w-full h-48 mb-4">
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="rounded-lg object-cover"
+              />
+            </div>
+
+            {/* Certificate Details */}
+            <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
+            <p className="text-gray-300 text-sm mt-2">{cert.description}</p>
           </motion.div>
         ))}
       </div>
-      
-      {/* Modal for viewing certificate details */}
-      {selectedCert && (
-        <div className="fixed inset-0 flex items-center justify-center p-4 bg-black/50">
-          <motion.div 
-            className="bg-white p-6 rounded-xl shadow-2xl max-w-lg text-white"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-          >
-            <img src={selectedCert.image} alt={selectedCert.title} className="rounded-lg" />
-            <h2 className="text-2xl font-bold mt-4">{selectedCert.title}</h2>
-            <p className="text-white mt-2">{selectedCert.description}</p>
-            <button className="mt-4 px-4 py-2 bg-lime-600 text-white rounded-lg hover:bg-lime-700" onClick={() => setSelectedCert(null)}>Close</button>
-          </motion.div>
-        </div>
-      )}
     </div>
-</>
-
+    
+    
+    </>
   );
 }

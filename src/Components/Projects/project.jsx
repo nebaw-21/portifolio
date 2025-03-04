@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaProjectDiagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 import Header from "../Header";
 import LargeCard from "./LargeCard";
 import SmallCard from "./SmallCard";
@@ -13,9 +14,6 @@ const projects = [
   { id: 6, title: "Crypto Dashboard", image: "crypto.jpg", link: "#" },
   { id: 7, title: "Image Recognition", image: "image-recognition.jpg", link: "#" },
   { id: 8, title: "Portfolio Website", image: "portfolio.jpg", link: "#" },
-  { id: 9, title: "Crypto Dashboard", image: "crypto.jpg", link: "#" },
-  { id: 10, title: "Image Recognition", image: "image-recognition.jpg", link: "#" },
-  { id: 11, title: "Portfolio Website", image: "portfolio.jpg", link: "#" },
 ];
 
 const itemsPerPage = 7;
@@ -29,23 +27,46 @@ export default function ProjectShowcase() {
     currentPage * itemsPerPage
   );
 
+  const title = "My Projects".split("");
+
   return (
     <>
       <Header />
       <section className="p-10 bg-gray-900 text-white min-h-screen text-center">
-        <h2 className="text-3xl font-bold text-center mb-8 tracking-wide">🚀 My Projects</h2>
+        
+        {/* Animated Title */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          className="flex justify-center items-center mb-8"
+        >
+          <FaProjectDiagram className="text-cyan-500 w-6 h-6 mr-2" />
+          <h2 className="text-2xl md:text-3xl font-bold flex ml-2">
+            {title.map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.3 }}
+                viewport={{ once: true }}
+                className={letter === "P" ? "ml-2" : ""} // Adds space before "Projects"
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </h2>
+        </motion.div>
 
         {/* Project Display Layout */}
         <div className="flex flex-col gap-8 items-center">
           {displayedProjects.map((project, index) => {
             if (index === 0 || index === 3) {
-              // Large Card for 1st and 4th project
               return <LargeCard key={project.id} />;
             } else if (index === 1 || index === 2 || index === 4 || index === 5) {
-              // Small Cards in pairs
               if (index % 2 === 1) {
                 return (
-                  <div key={project.id} className="flex gap-6 justify-center">
+                  <div key={project.id} className="flex flex-col md:flex-row gap-6 justify-center">
                     <SmallCard />
                     {displayedProjects[index + 1] && <SmallCard />}
                   </div>
