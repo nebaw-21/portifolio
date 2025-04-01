@@ -7,7 +7,8 @@ export default function Experience() {
   const title = "WorkExperience".split(""); // Removed space in string
 
   return (
-    <>
+    <div className=" flex flex-col items-center justify-center ">
+
       {/* Animated Title */}
       <motion.div
         initial="hidden"
@@ -64,6 +65,6 @@ export default function Experience() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

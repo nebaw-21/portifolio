@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect, useCallback } from "react"
 import { TbMessageCircleUser } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 export default function TestimonialSlider() {
@@ -13,24 +14,12 @@ export default function TestimonialSlider() {
     {
       id: 1,
       name: "Tito Frezer",
-      image: "../../src/assets/download-removebg-preview.png",
-      text: "I'm absolutely thrilled with the results! The team went above and beyond my expectations, delivering exceptional quality and service. I couldn't be happier with my experience and would recommend them to anyone looking for top-notch solutions.",
+      image: "../../src/assets/tito.jfif",
+      text: "I worked with Nebiyu with a web based project that was in high demand for our company(internship management platform). He is a great developer with solid frontend experience especially React.js and UI/UX design. He was also disciplined and committed through out the whole project. I highly recommend to work with him",
   
     },
-    {
-      id: 2,
-      name: "JAMES WILSON",
-      image: "/placeholder.svg?height=80&width=80",
-      text: "Working with this team has been a game-changer for my business. Their attention to detail and commitment to excellence is unmatched. The results speak for themselves - my customers are happier and my business is growing!",
 
-    },
-    {
-      id: 3,
-      name: "SOPHIA CHEN",
-      image: "/placeholder.svg?height=80&width=80",
-      text: "I was skeptical at first, but now I'm a true believer! The innovative approach and personalized attention made all the difference. I've already recommended them to all my colleagues and friends.",
 
-    },
   ]
 
   const scrollToTestimonial = (index) => {
@@ -68,7 +57,7 @@ export default function TestimonialSlider() {
   const text = "Testimonial".split(""); // Splitting text for animation
 
   return (
-    <div  data-aos="flip-left" className="w-full max-w-5xl mx-auto px-4 py-12">
+    <div  data-aos="flip-right" className="w-full max-w-5xl mx-auto px-4 py-12">
           {/* Animated Title on Scroll */}
           <motion.div
         initial="hidden"
@@ -102,7 +91,7 @@ export default function TestimonialSlider() {
           <div key={testimonial.id} className="min-w-full w-full flex-shrink-0 snap-center px-4">
             <div className="bg-gray-900 rounded-lg p-8 flex flex-col items-center relative">
               {/* Profile Image */}
-              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white mb-6">
+              <Link to={"https://www.linkedin.com/in/tito-frezer-3227661b8/"} className="w-20 h-20 rounded-full overflow-hidden border-4 border-white mb-6">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -110,7 +99,7 @@ export default function TestimonialSlider() {
                   height={80}
                   className="object-cover w-full h-full scale-105 hover:scale-110"
                 />
-              </div>
+              </Link>
 
               {/* Testimonial Text */}
               <p className="text-white text-center mb-6 max-w-md">{testimonial.text}</p>
@@ -120,7 +109,7 @@ export default function TestimonialSlider() {
                 <svg width="100" height="30" viewBox="0 0 100 30" className="mb-2">
                   <path d="M10,20 Q30,5 50,20 Q70,35 90,20" stroke="cyan" fill="transparent" strokeWidth="1" />
                 </svg>
-                <p className="text-white font-semibold tracking-wider">{testimonial.name}</p>
+                <Link to={"https://www.linkedin.com/in/tito-frezer-3227661b8/"} className="text-white font-semibold tracking-wider">{testimonial.name}</Link>
               </div>
 
             </div>

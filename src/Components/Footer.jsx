@@ -41,7 +41,7 @@ export default function Footer() {
                 className="bg-slate-800 p-2 rounded-full hover:bg-slate-700 transition-colors"
               >
                 <Github size={20} />
-                <span className="sr-only">GitHub</span>
+                <span className="sr-only ">GitHub</span>
               </Link>
               <Link
                 to="https://t.me/nebaw_21"

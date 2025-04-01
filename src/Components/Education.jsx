@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 export default function EducationTimeline() {
   const educationData = [
     {
-      degree: "Bachelor Of Science In Computer Science",
-      period: "2016-2020",
-      institution: "Massachusetts Institute Of Technology (MIT)",
+      degree: "Bachelor Of Science In Software Engineering",
+      period: "2020-2025",
+      institution: "Addis Ababa Science and Technology University",
       description:
-        "Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence.",
+        "Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and web development.",
     },
     {
-      degree: "Master Of Computer Science",
-      period: "2020-2022",
-      institution: "Stanford University",
+      degree: "AWS Solutions Architect",
+      period: "2024-2025",
+      institution: "ALX",
       description:
-        "Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding.",
+        "Completed a 8-months program that covered cloud computing, networking, and security.",
     },
   ];
 
@@ -63,7 +63,7 @@ export default function EducationTimeline() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
-                className="bg-gray-900 shadow-lg shadow-cyan-500 rounded-lg p-5 w-full transition-all duration-300 hover:shadow-lg"
+                className="bg-gray-900 flex flex-col gap-2 shadow-lg shadow-cyan-500 rounded-lg p-5 w-full transition-all duration-300 hover:shadow-lg"
               >
                 <h2 className="text-lg font-semibold text-white">{education.degree}</h2>
                 <p className="text-sm text-white mb-1">

@@ -52,7 +52,7 @@
     };
 
     return (
-      <section className="relative bg-gray-900 text-white min-h-[600px] md:min-h-[530px] flex items-center shadow-2xl">
+      <section className="relative bg-gray-900 text-white min-h-[650px] md:min-h-[530px] flex items-center shadow-2xl">
         <div className="w-full flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6 md:px-0">
           {/* Left Content */}
           <div data-aos="fade-right" data-aos-duration="1500" className="max-w-lg flex justify-center flex-col items-center">
