@@ -3,6 +3,7 @@ import { useState, useRef, useEffect, useCallback } from "react"
 import { TbMessageCircleUser } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import tito from "../../src/assets/tito.jfif";
 
 
 export default function TestimonialSlider() {
@@ -14,7 +15,7 @@ export default function TestimonialSlider() {
     {
       id: 1,
       name: "Tito Frezer",
-      image: "../../src/assets/tito.jfif",
+      image: tito,
       text: "I worked with Nebiyu with a web based project that was in high demand for our company(internship management platform). He is a great developer with solid frontend experience especially React.js and UI/UX design. He was also disciplined and committed through out the whole project. I highly recommend to work with him",
   
     },
