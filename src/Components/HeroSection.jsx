@@ -3,7 +3,7 @@
   import instagram from "../assets/instagram-1-svgrepo-com.svg";
   import linkedin from "../assets/linkedin-svgrepo-com.svg";
   import github from "../assets/github-142-svgrepo-com.svg";
-  import nebiyu from "../assets/download-removebg-preview.png";
+  import nebiyu from "../assets/nebiyu.png";
   import { FaDownload } from "react-icons/fa";
 
   const HeroSection = () => {

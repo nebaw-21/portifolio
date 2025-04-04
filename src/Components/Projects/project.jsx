@@ -110,7 +110,7 @@ export default function ProjectShowcase() {
 
       <Header />
 
-      <section className="relative pt-24 pb-16 px-4 md:px-10 min-h-screen overflow-hidden bg-gray-900 text-white">
+      <section className="relative pt-12 pb-16 px-4 md:px-10 min-h-screen overflow-hidden bg-gray-900 text-white">
         {/* Background stars */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">{stars}</div>
 
@@ -124,7 +124,7 @@ export default function ProjectShowcase() {
               <div className="absolute -top-10 -left-10 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl"></div>
               <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-purple-500/10 rounded-full blur-xl"></div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 relative">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative">
                 <span className="inline-block mr-3 text-cyan-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

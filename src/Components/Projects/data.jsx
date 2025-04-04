@@ -22,12 +22,14 @@ import songApp from "../../../src/assets/song.jpg";
     description:
       "The Movie App, built with React and Vite, fetches movie data from the TMDB API. Users can browse, search, view details, receive new release notifications, and share favorites. It features a user-friendly interface with Tailwind CSS for styling.",
   },
+
   {
     id: 1,
-    title: "Movies Recommendation Chrome Extension",
+    title: "Chrome Extension",
     image: chromeExtension,
     link: "https://github.com/nebaw-21/Movies_Recommendation_chrome_extension.git",
   },
+  
   {
     id: 2,
     title: "PayPal React Integration",
